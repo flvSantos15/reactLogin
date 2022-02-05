@@ -25,7 +25,7 @@ type AuthContextData = {
   //função que irá receber as credenciais do usuario
   //as credenciais são desse tipo
   signIn(credenciais: SignInCredencials): Promise<void>
-  user: User
+  user: User | undefined
   //pra saber se esta logado ou n
   isAuthenticated: boolean;
 }
