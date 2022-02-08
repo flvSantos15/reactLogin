@@ -25,7 +25,7 @@ type AuthContextData = {
   //função que irá receber as credenciais do usuario
   //as credenciais são desse tipo
   signIn(credenciais: SignInCredencials): Promise<void>
-  user: User | undefined
+  user: User
   //pra saber se esta logado ou n
   isAuthenticated: boolean;
 }
@@ -113,8 +113,8 @@ export function AuthProvider({ children }: AuthProviderProps) {
         roles
       })
 
-      api.defaults.headers['Authorization'] = `Bearer ${token}`
-      api.defaults.headers['Authorization'] = `Bearer ${token}`
+      // api.defaults.headers['Authorization'] = `Bearer ${token}`
+      // api.defaults.headers['Authorization'] = `Bearer ${token}`
       
       //navego o user p outra pg
       Router.push('/Dashboard')
